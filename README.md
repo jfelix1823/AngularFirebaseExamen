@@ -1,4 +1,4 @@
-# Clientes
+# Cliente Angular Firebase
 
 Para poder utilizar se tiene que configurar la llave para conectarse al firebase.
 
