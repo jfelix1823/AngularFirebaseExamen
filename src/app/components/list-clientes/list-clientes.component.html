@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de Clientes</span>
+            <button class="btn btn-dark btn-lg float-right" routerLink="/create-cliente">Agregar cliente</button>
+            <h5 style="margin-top: 30px;" *ngIf="clientes.length == 0">No hay datos para mostrar</h5>
+            <table *ngIf="clientes.length > 0" class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Fecha Nacimiento</th>                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cliente of clientes">
+                    <td>{{ cliente.nombre }}</td>
+                    <td>{{ cliente.apellido }}</td>
+                    <td>{{ cliente.edad }}</td>
+                    <td>{{ cliente.fechaNacimiento }}</td>                    
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Promedio edad entre todos los clientes : </h5>
+      <p class="card-text">{{ promedioEdades }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Desviación estándar entre las edades de todos los clientes : </h5>
+      <p class="card-text">{{ desviacionEstandar }}</p>
+    </div>
+  </div>
+</div>
